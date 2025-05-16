@@ -1,25 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main() {
-int n;
-cin>>n;
-bool a[n + 1];
-for(int i = 0;i <= n;i++){
-a[i] = true;
-}
-for (int j = 2; j * j <= n; j++) {
-if (a[j] == true) {
-for (int k = j + j; k <= n; k += j) {
-if (k % j==0){
-a[k]=false;
-}
-}
-}
-}
-for (int i = 2; i <= n; i++) {
-if (a[i] == true) {
-cout << i << endl;
-}
-return 0;
-}
+int main()
+{
+    long long n,i,j,k;
+    cin>>n;
+    bool a[n+1];
+    for(i=0; i<=n;i++)
+    {
+        a[i]=true;
+    }
+    for(j=2; j<=sqrt(n); j++)
+    {
+        //actual check
+        if(a[j] == true)
+        {
+            for(k=j+j; k<=n; k++)
+            {
+                if(k % j == 0)
+                {
+                    a[k]=0;
+                }
+            }
+        }
+    }
+    for(i=2; i<=n; i++)
+    {
+        if(a[i]) cout << i << " ";
+    }
 }

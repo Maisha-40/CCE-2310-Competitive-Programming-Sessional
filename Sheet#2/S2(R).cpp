@@ -7,22 +7,30 @@
 using namespace std;
 int main()
 {
-while(1)
-{
-    int x,y;
-    cin>>x>>y;
-    int minn=min(x,y);
-    int maxx=max(x,y);
-    int sum=0;
-    if(x<=0||y<=0)
+    while(1)
     {
-        break;
+        long long a,b,max_v,min_v;
+        cin >> a >> b;
+        if(a <= 0 || b <= 0)
+            break;
+        if(a >= b)
+        {
+            max_v = a;
+            min_v = b;
+        }
+        else
+        {
+            max_v = b;
+            min_v = a;
+        }
+
+        long long sum = 0;
+        for(int k = min_v; k <= max_v; k++)
+        {
+            cout << k << " ";
+            sum = sum + k;
+        }
+
+        cout << "sum =" << sum << endl; 
     }
-    for(int i=minn;i<=maxx;i++)
-    {
-        cout<<i<<" ";
-    sum+=i;
-    }
-    cout<<"sum ="<<sum<<endl;
-}
 }

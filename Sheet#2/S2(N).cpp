@@ -5,16 +5,21 @@
 5.//Date: 19/5/25
 #include<bits/stdc++.h>
 using namespace std;
+int main()
+{
+char a;
+cin>>a;
+long long n;
+cin>>n;
 
-int main(){
-char S;
-int N;
-cin>>S>>N;
-vector<int>numbers(N);
-for(int i=0; i<N; i++) {
-cin>>numbers[i];
+for(int i=1; i<=n;i++)
+{
+    long long j;
+    cin>>j;
+for(int k=1; k<=j;k++)
+{
+    cout<<a;
 }
-for(int i=0; i<N; i++) {
-cout<<string(numbers[i], S)<<endl;
+cout<<endl;
 }
 }

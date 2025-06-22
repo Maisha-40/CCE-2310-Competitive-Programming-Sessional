@@ -1,3 +1,8 @@
+1.// Problem name: O. Fibonacci  
+2.//Course title: Competitive Programming Sessional 
+3.//Course code: 2310
+4.// Course teacher name: Mirza Raquib
+5.//Date: 22/6/25
 #include<bits/stdc++.h>
 using namespace std;
 int main()

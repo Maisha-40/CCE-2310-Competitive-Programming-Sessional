@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    string s,t;
+   getline(cin,s);
+   for(int i=0;i<s.size();i++)
+   {
+       if(s[i]=='\\')
+       {
+           break;
+       }
+       else
+        cout<<s[i];
+   }
+
+}
